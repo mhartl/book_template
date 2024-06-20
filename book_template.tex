@@ -7,7 +7,18 @@
 % \setdefaultlanguage{french}
 % \DeclareTextCommandDefault{\nobreakspace}{\leavevmode\nobreak\ }
 
+\usepackage{bm}
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\usepackage[svgnames,table]{xcolor}
 \usepackage{latex_styles/softcover}
+\usepackage{latex_styles/enumitem}
+\usepackage{mathrsfs}
+\newlist{bgroman}{enumerate}{3}
+\setlist[bgroman]{label=\Roman*}
+\newlist{smroman}{enumerate}{3}
+\setlist[smroman]{label=(\roman*)}
+\newlist{alphalist}{enumerate}{3}
+\setlist[alphalist]{label=(\alph*)}
 \VerbatimFootnotes % Allows verbatim text in footnotes
 \title{Title of the Book}
 \subtitle{Change me}
