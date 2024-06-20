@@ -1,21 +1,161 @@
-% Place additional custom commands below.
-% NOTE: These commands will generally be available across output formats.
-% For commands (such as hyphenation) that only pertain to PDF output, use the
-% file `custom_pdf.sty` instead.
 
-% Examples:
-%   No arguments:
-%     Insert '\emph{The Ruby on Rails Tutorial}' wherever '\tutorial' occurs:
-%
-% \newcommand{\tutorial}{\emph{The Ruby on Rails Tutorial}}
-%
-%   One argument:
-%     Convert '\bfi{text}' to '\textbf{\textit{text}}' (boldface italic):
-%
-% \newcommand{\bfi}[1]{\textbf{\textit{{#1}}}}
+\renewcommand{\image}[1]{\begin{center}\includegraphics[width=\maxwidth{\textwidth}]{#1}\end{center}}
+\newcommand{\smallimage}[1]{\begin{center}\includegraphics[width=\maxwidth{0.55\textwidth}]{#1}\end{center}}
 
-% Include a command for the sake of the test suite.
-\newcommand{\softcover}{\texttt{softcover}}
+\newcommand{\ex}[1]{\noindent\textbf{Exercise~#1.\ }}
+\newcommand{\exa}[1]{\noindent\textbf{Example~#1.\ }}
+\newcommand{\hl}[1]{{\color{red} #1}}
+\newcommand{\abs}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+% Cardinality
+\newcommand{\card}[1]{\ensuremath{\left\lvert #1\right\rvert}}
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\Nz}{\ensuremath{\mathbb{N}_0}}
+% Use the convention 0 ∈ ℕ.
+\newcommand{\N}{\Nz}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\F}{\ensuremath{\mathbb{F}}}
+\renewcommand{\P}{\ensuremath{\mathbb{P}}}
+\newcommand{\Fn}{\ensuremath{\F^n}}
+\newcommand{\lthen}{\ensuremath{\rightarrow}}
+\newcommand{\lbecause}{\ensuremath{\leftarrow}}
+\newcommand{\lnotthen}{\ensuremath{\nrightarrow}}
+\newcommand{\lif}{\ensuremath{\leftarrow}}
+\newcommand{\liff}{\ensuremath{\leftrightarrow}}
+\newcommand{\lxor}{\ensuremath{\oplus}}
+\newcommand{\lnor}{\ensuremath{\downarrow}}
+\newcommand{\lnand}{\ensuremath{\mid}}
+\newcommand{\union}{\ensuremath{\cup}}
+\newcommand{\intersect}{\ensuremath{\cap}}
+\newcommand{\bigunion}{\ensuremath{\bigcup}}
+\newcommand{\bigintersect}{\ensuremath{\bigcap}}
+\newcommand{\op}{\ensuremath{\star}}
+\newcommand{\binop}[2]{\ensuremath{#1\,\op\,#2}}
+\newcommand{\inv}[1]{\ensuremath{#1^{-1}}}
+\newcommand{\qeq}{\ensuremath{\stackrel{?}{=}}}
+% Complex conjugate
+\newcommand{\cc}[1]{\ensuremath{\overline{#1}}}
+% Vector zero
+\newcommand{\vz}{\ensuremath{0}}
+% Math boldface italic
+\newcommand{\mathbfit}[1]{\ensuremath{{\boldsymbol #1}}}
+\newcommand{\powersetP}{\ensuremath{\mathscr{P}}}
+\newcommand{\powerset}[1]{\ensuremath{\powersetP(#1)}}
+\newcommand{\powersetk}[2]{\ensuremath{\powersetP_{#1}(#2)}}
+% family of sets
+\newcommand{\familyofsets}[1]{\ensuremath{\bm{#1}}}
+% such that
+\newcommand{\st}{\mid}
+% Symmetric difference
+\newcommand{\symdiffsymbol}{\ensuremath{\triangle}}
+\newcommand{\symdiff}{\ensuremath{\ \symdiffsymbol\ }}
+\newcommand{\boundary}{\ensuremath{\partial}}
+\newcommand{\vspan}{\ensuremath{\mathrm{span}}}
+\newcommand{\subspace}{\ensuremath{\leq}}
+\newcommand{\notsubspace}{\ensuremath{\nleq}}
+\newcommand{\done}{\qed\bigskip}
+\newcommand{\congruentto}{\equiv}
+\newcommand{\divides}{\mid}
+\newcommand{\doesnotdivide}{\nmid}
+\newcommand{\family}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\composedwith}{\ensuremath{\circ}}
+\newcommand{\Dom}[1]{\ensuremath{\mathrm{Dom}(#1)}}
+\newcommand{\Ran}[1]{\ensuremath{\mathrm{Ran}(#1)}}
+\newcommand{\cross}{\times}
+\newcommand{\ceil}[1]{\ensuremath{\left\lceil{#1}\right\rceil}}
+\newcommand{\half}{\ensuremath{\frac{1}{2}}}
+\newcommand{\closure}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\nan}{\ensuremath{\mathrm{NaN}}}
+% Golden ratio
+\newcommand{\gr}{\ensuremath{\varphi}}
 
-% Include custom math example.
-\newcommand{\unitvec}[1]{\ensuremath{\hat #1}}
+\renewcommand{\emptyset}{\ensuremath{\varnothing}}
+\renewcommand{\implies}{\ensuremath{\Rightarrow}}
+\renewcommand{\impliedby}{\ensuremath{\Leftarrow}}
+\renewcommand{\Re}[1]{\ensuremath{\mathrm{Re}(#1)}}
+\renewcommand{\Im}[1]{\ensuremath{\mathrm{Im}(#1)}}
+\renewcommand{\C}{\ensuremath{\mathbb{C}}}
+\renewcommand{\iff}{\ensuremath{\Leftrightarrow}}
+
+\newunicodechar{∧}{\ensuremath{\land}}
+\newunicodechar{∨}{\ensuremath{\lor}}
+\newunicodechar{¬}{\ensuremath{\lnot}}
+\newunicodechar{↓}{\lnor}
+\newunicodechar{↔}{\ensuremath{\liff}}
+\newunicodechar{∀}{\ensuremath{\forall}}
+\newunicodechar{∃}{\ensuremath{\exists}}
+\newunicodechar{𝑗}{\ensuremath{j}}
+\newunicodechar{𝑘}{\ensuremath{k}}
+\newunicodechar{𝑣}{\ensuremath{v}}
+\newunicodechar{𝑤}{\ensuremath{w}}
+\newunicodechar{𝑥}{\ensuremath{x}}
+\newunicodechar{𝑦}{\ensuremath{y}}
+\newunicodechar{𝑧}{\ensuremath{z}}
+\newunicodechar{𝑝}{\ensuremath{p}}
+\newunicodechar{𝑞}{\ensuremath{q}}
+\newunicodechar{𝑟}{\ensuremath{r}}
+\newunicodechar{𝑠}{\ensuremath{s}}
+\newunicodechar{𝑎}{\ensuremath{a}}
+\newunicodechar{𝑏}{\ensuremath{b}}
+\newunicodechar{𝑐}{\ensuremath{c}}
+\newunicodechar{𝑑}{\ensuremath{d}}
+\newunicodechar{𝑒}{\ensuremath{e}}
+\newunicodechar{𝑖}{\ensuremath{i}}
+\newunicodechar{𝑚}{\ensuremath{m}}
+\newunicodechar{𝑛}{\ensuremath{n}}
+\newunicodechar{𝐴}{\ensuremath{A}}
+\newunicodechar{𝐵}{\ensuremath{B}}
+\newunicodechar{𝐶}{\ensuremath{C}}
+\newunicodechar{𝐷}{\ensuremath{D}}
+\newunicodechar{𝐸}{\ensuremath{E}}
+\newunicodechar{𝐹}{\ensuremath{F}}
+\newunicodechar{𝐺}{\ensuremath{G}}
+\newunicodechar{𝑃}{\ensuremath{P}}
+\newunicodechar{𝑅}{\ensuremath{R}}
+\newunicodechar{𝑆}{\ensuremath{S}}
+\newunicodechar{𝑇}{\ensuremath{T}}
+\newunicodechar{𝑈}{\ensuremath{U}}
+\newunicodechar{𝑉}{\ensuremath{V}}
+\newunicodechar{𝑊}{\ensuremath{W}}
+\newunicodechar{𝑋}{\ensuremath{X}}
+\newunicodechar{𝑿}{\ensuremath{\bm{X}}}
+\newunicodechar{𝐼}{\ensuremath{I}}
+\newunicodechar{⊆}{\ensuremath{\subseteq}}
+\newunicodechar{⊈}{\ensuremath{\nsubseteq}}
+\newunicodechar{∪}{\ensuremath{\union}}
+\newunicodechar{∩}{\ensuremath{\intersect}}
+\newunicodechar{∈}{\ensuremath{\in}}
+\newunicodechar{ϵ}{\ensuremath{\in}}
+\newunicodechar{∅}{\ensuremath{\emptyset}}
+\newunicodechar{Δ}{\ensuremath{\triangle}}
+\newunicodechar{𝛿}{\ensuremath{\delta}}
+\newunicodechar{⋅}{\ensuremath{\cdot}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{ℕ}{\ensuremath{\N}}
+\newunicodechar{ℤ}{\ensuremath{\Z}}
+\newunicodechar{ℚ}{\ensuremath{\Q}}
+\newunicodechar{ℝ}{\ensuremath{\R}}
+\newunicodechar{ℂ}{\ensuremath{\C}}
+\newunicodechar{𝔽}{\ensuremath{\F}}
+\newunicodechar{∖}{\ensuremath{\setminus}}
+\newunicodechar{∉}{\ensuremath{\notin}}
+\newunicodechar{∞}{\ensuremath{\infty}}
+\newunicodechar{★}{\ensuremath{\star}}
+\newunicodechar{⋆}{\ensuremath{\star}}
+\newunicodechar{∗}{*}
+\newunicodechar{⋃}{\union}
+\newunicodechar{⋂}{\intersect}
+\newunicodechar{Δ}{\ensuremath{\ \triangle\ }}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{◦}{\ensuremath{\composedwith}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+\newunicodechar{⊗}{\ensuremath{\otimes}}
+\newunicodechar{→}{\ensuremath{\to}}
+\newunicodechar{↾}{\ensuremath{\restriction}}
+
+\DeclareMathOperator{\area}{Area}
+
+\newenvironment{proof_idea}
+    {\noindent \emph{Proof idea.}}{}

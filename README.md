@@ -23,3 +23,5 @@ $ softcover server --pdf
 
 This automatically builds a new PDF when the source files are changed. It's especially convenient when combined with a PDF reader like [Skim](https://skim-app.sourceforge.io/) that can auto-reload the document when the PDF changes. (To configure this, go to Skim > Preferences, click Sync, and select "Check for file changes".)
 
+The file `latex_styles/custom.sty` includes a large number of commands that I've found useful when typesetting mathematics. Adapt it to your own uses as you see fit, or delete its contents entirely.
+
